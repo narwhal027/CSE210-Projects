@@ -31,9 +31,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Circle myCircle = new Circle();
+        Circle myCircle = new Circle(10);
         Circle myCircle2 = new Circle();
-        myCircle.SetRadius(10);
+        // myCircle.SetRadius(10);
         Console.WriteLine($"{myCircle.GetRadius()}");
 
         myCircle2.SetRadius(20);
@@ -43,9 +43,9 @@ class Program
         Console.WriteLine($"{myCircle2.GetArea()}");
 
 
-        Cylinder myCylinder = new Cylinder();
-        myCylinder.SetCircle(myCircle);
-        myCylinder.SetHeight(10);
+        Cylinder myCylinder = new Cylinder(100, 5);
+        // myCylinder.SetCircle(myCircle);
+        // myCylinder.SetHeight(10);
         Console.WriteLine($"{myCylinder.GetVolume()}");
         // Console.WriteLine("Hello Sandbox World!");
         // int x = 10;
