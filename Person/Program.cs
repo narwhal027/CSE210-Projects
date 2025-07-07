@@ -10,4 +10,8 @@
         Doctor myDoctor = new Doctor("Hodgins", "Smith", 40, "Stethescope");
         Console.WriteLine(myDoctor.GetDoctorInformation());
     }
+    private static void DisplayPersonInformation(Person person)
+    {
+        Console.WriteLine(person.GetPersonInformation());
+    }
 }
