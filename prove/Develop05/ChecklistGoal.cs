@@ -1,4 +1,3 @@
-// File: ChecklistGoal.cs
 using System;
 
 namespace EternalQuest

@@ -1,6 +1,4 @@
-// File: Program.cs
 using System;
-
 namespace EternalQuest
 {
     public class Program
@@ -15,7 +13,8 @@ namespace EternalQuest
             {
                 Console.WriteLine("\n1. View Goals  2. Record Event  3. Add Goal  4. View Profile  5. Save  6. Exit");
                 Console.Write("Select: ");
-                switch (Console.ReadLine())
+                string input = Console.ReadLine();
+                switch (input)
                 {
                     case "1": ViewGoals(); break;
                     case "2": RecordEvent(); break;
@@ -39,8 +38,8 @@ namespace EternalQuest
         {
             ViewGoals();
             Console.Write("Enter goal number: ");
-            if (int.TryParse(Console.ReadLine(), out int idx)
-                && idx > 0 && idx <= quest.AllGoals.Count)
+            string selection = Console.ReadLine();
+            if (int.TryParse(selection, out int idx) && idx > 0 && idx <= quest.AllGoals.Count)
             {
                 int pts = quest.AllGoals[idx - 1].RecordEvent(quest);
                 if (pts == 0)
@@ -55,7 +54,8 @@ namespace EternalQuest
             string type = Console.ReadLine().ToLower();
             Console.Write("Name: "); string name = Console.ReadLine();
             Console.Write("Description: "); string desc = Console.ReadLine();
-            Console.Write("Points per event: "); int pts = int.Parse(Console.ReadLine());
+            Console.Write("Points per event: "); string ptsInput = Console.ReadLine();
+            int pts = int.Parse(ptsInput);
             BaseGoal goal = type switch
             {
                 "simple" => new SimpleGoal(name, desc, pts),

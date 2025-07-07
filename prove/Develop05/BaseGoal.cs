@@ -1,4 +1,3 @@
-// File: BaseGoal.cs
 using System;
 
 namespace EternalQuest
