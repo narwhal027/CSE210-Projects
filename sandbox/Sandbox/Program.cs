@@ -29,51 +29,62 @@ using System.Security.Cryptography.X509Certificates;
 // }
 class Program
 {
+    static void TestByRef(int x, ref string name) {
+        x++;
+        name += "This is a string addition.";
+        Console.WriteLine($"In TestByRef: {x}, {name}");
+    }
     private static void Main(string[] args)
     {
-        int sleepTime = 250;
-        Console.WriteLine("Yo Bob");
-        DateTime currentTime = DateTime.Now;
-        int time = 9;
-        DateTime endTime = currentTime.AddSeconds(time);
+        Console.WriteLine("This is the TestQuestionOperatorproject.");
+        int x = 10;
+        string name = "bob";
+        TestByRef(x, ref name);
+        Console.WriteLine($"In Main: {x}, {name}");
 
-        string animationString2 = "-+\\|/";
-        int index = 0;
+        //     int sleepTime = 250;
+        //     Console.WriteLine("Yo Bob");
+        //     DateTime currentTime = DateTime.Now;
+        //     int time = 9;
+        //     DateTime endTime = currentTime.AddSeconds(time);
+
+        //     string animationString2 = "-+\\|/";
+        //     int index = 0;
 
 
-        int count = time - 5;
-        while (DateTime.Now < endTime)
-        {
-            Console.Write(animationString2[index++ % animationString2.Length]);
-            Thread.Sleep(sleepTime);
-            Console.Write("\b");
+        //     int count = time - 5;
+        //     while (DateTime.Now < endTime)
+        //     {
+        //         Console.Write(animationString2[index++ % animationString2.Length]);
+        //         Thread.Sleep(sleepTime);
+        //         Console.Write("\b");
 
-        }
-        endTime = currentTime.AddSeconds(10);
-        string animationString = "(^_^)(-_-)";
-        while (DateTime.Now < endTime)
-        {
-            Console.Write(animationString[0..5]);
-            Thread.Sleep(sleepTime);
-            Console.Write("\b\b\b\b\b");
-            Console.Write(animationString[5..]);
-            Thread.Sleep(sleepTime);
-            Console.Write("\b\b\b\b\b");
+        //     }
+        //     endTime = currentTime.AddSeconds(10);
+        //     string animationString = "(^_^)(-_-)";
+        //     while (DateTime.Now < endTime)
+        //     {
+        //         Console.Write(animationString[0..5]);
+        //         Thread.Sleep(sleepTime);
+        //         Console.Write("\b\b\b\b\b");
+        //         Console.Write(animationString[5..]);
+        //         Thread.Sleep(sleepTime);
+        //         Console.Write("\b\b\b\b\b");
 
-            // Console.Write("|");
-            // Thread.Sleep(sleepTime);
-            // Console.Write("\b");
-            // Console.Write("/");
-            // Thread.Sleep(sleepTime);
-            // Console.Write("\b");
-            // Console.Write("-");
-            // Thread.Sleep(sleepTime);
-            // Console.Write("\b");
-            // Console.Write(@"\");
-            // Thread.Sleep(sleepTime);
-            // Console.Write("\b");
-        }
+        // Console.Write("|");
+        // Thread.Sleep(sleepTime);
+        // Console.Write("\b");
+        // Console.Write("/");
+        // Thread.Sleep(sleepTime);
+        // Console.Write("\b");
+        // Console.Write("-");
+        // Thread.Sleep(sleepTime);
+        // Console.Write("\b");
+        // Console.Write(@"\");
+        // Thread.Sleep(sleepTime);
+        // Console.Write("\b");
     }
+    
     // static void Main(string[] args)
     // {
     //     Circle myCircle = new Circle(10);
